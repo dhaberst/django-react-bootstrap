@@ -4,15 +4,15 @@ var BundleTracker = require('webpack-bundle-tracker')
 
 module.exports = {
     context: __dirname,
-    entry: './assets/js/index', 
-    
+    entry: './client/index',
+
     output: {
-        path: path.resolve('./assets/bundles/'), 
+        path: path.resolve('./server/structural-colour/bundles/'),
         filename: "[name]-[hash].js"
     },
-    
+
     plugins: [
-        new BundleTracker({filename: './webpack-stats.json'}), 
+        new BundleTracker({filename: './webpack-stats.json'}),
         //new webpack.optimize.UglifyJsPlugin(),
         //new webpack.optimize.DedupePlugin(),
         // new webpack.DefinePlugin({
@@ -21,21 +21,21 @@ module.exports = {
         //     }
         // })
     ],
-    
+
     module: {
         loaders: [
-            {test: /\.jsx?$/, 
-                exclude: /node_modules/, 
-                loader: 'babel-loader', 
+            {test: /\.jsx?$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader',
                 query: {
-                    presets: ['react'] 
+                    presets: ['react']
                 }
             }
         ]
     },
-    
+
     resolve: {
         modulesDirectories: ['node_modules'],
-        extensions: ['', '.js', '.jsx'] 
+        extensions: ['', '.js', '.jsx']
     }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "bootstrap",
+  "name": "structural-colour",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,8 +7,8 @@
     "start": "webpack --config webpack.config.js --watch",
     "production": "webpack -p"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Daniel Haberstock",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
