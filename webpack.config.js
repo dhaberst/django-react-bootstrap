@@ -7,8 +7,8 @@ module.exports = {
     entry: './client/index',
 
     output: {
-        path: path.resolve('./server/structural-colour/bundles/'),
-        filename: "[name]-[hash].js"
+        path: path.resolve('./static/'),
+        filename: "bundle.js",
     },
 
     plugins: [
@@ -35,7 +35,7 @@ module.exports = {
     },
 
     resolve: {
-        modulesDirectories: ['node_modules'],
-        extensions: ['', '.js', '.jsx']
+        modules: [__dirname, 'node_modules'],
+        extensions: ['.js', '.jsx']
     }
 }
